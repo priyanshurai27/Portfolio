@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Responsive Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="output">
+        <input type="text" id="result" class="result" disabled>
+      </div>
+      <div class="keys">
+        <button class="operator" onclick="clearResult()">C</button>
+        <button class="operator" onclick="backspace()">CE</button>
+        <button class="operator" onclick="calculate('%')">%</button>
+        <button class="operator" onclick="calculate('/')">÷</button>
+        <button onclick="updateResult('7')">7</button>
+        <button onclick="updateResult('8')">8</button>
+        <button onclick="updateResult('9')">9</button>
+        <button class="operator" onclick="calculate('*')">x</button>
+        <button onclick="updateResult('4')">4</button>
+        <button onclick="updateResult('5')">5</button>
+        <button onclick="updateResult('6')">6</button>
+        <button class="operator" onclick="calculate('-')">-</button>
+        <button onclick="updateResult('1')">1</button>
+        <button onclick="updateResult('2')">2</button>
+        <button onclick="updateResult('3')">3</button>
+        <button class="operator" onclick="calculate('+')">+</button>
+        <button class="zero" onclick="updateResult('0')">0</button>
+        <button onclick="updateResult('.')">.</button>
+        <button class="operator" onclick="calculate('=')">=</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
