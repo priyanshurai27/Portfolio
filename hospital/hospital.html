@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Static Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: url('images/hospital.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 50px;
+            background: #fff;
+        }
+        .hero img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        .service {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .service img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .contact {
+            background-color: #fff;
+            padding: 20px;
+        }
+        .contact form {
+            max-width: 400px;
+            margin: auto;
+        }
+        .contact form input, .contact form textarea, .contact form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact form button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Hospital</h1>
+        <p>Your Health, Our Commitment</p>
+    </header>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#about">About Us</a>
+    </nav>
+    <section class="hero">
+        <img src="" alt="Hospital Overview">
+        <h1>Leading Healthcare Provider</h1>
+        <p>Offering world-class medical services with advanced technology.</p>
+    </section>
+    <section id="services" class="services">
+        <div class="service">
+            <img src="images/emergency.jpg" alt="Emergency Care">
+            <h2>Emergency Care</h2>
+            <p>24/7 emergency services for critical medical needs.</p>
+        </div>
+        <div class="service">
+            <img src="images/Outpatient.jpg" alt="Outpatient Services">
+            <h2>Outpatient Services</h2>
+            <p>Comprehensive diagnostics and specialist consultations.</p>
+        </div>
+        <div class="service">
+            <img src="images/pharmacy.jpg" alt="Pharmacy">
+            <h2>Pharmacy</h2>
+            <p>Fully stocked pharmacy for all your medication needs.</p>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Our Hospital. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert(`Thank you, ${name}. Your message has been received!`);
+                document.getElementById('contactForm').reset();
+            } else {
+                alert('Please fill out all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
